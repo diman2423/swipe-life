@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d2230">
+  <meta name="description" content="Reigns про жизнь и деньги: свайпай решения, держи четыре шкалы подальше от нуля и от сотни.">
+  <title>Свайп-жизнь</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <header class="top" id="scales"></header>
+    <p class="age"><span id="age"></span><span id="assets"></span></p>
+
+    <p class="question" id="question"></p>
+
+    <div class="stage" id="stage">
+      <div class="card card-back" aria-hidden="true"></div>
+    </div>
+
+    <p class="who" id="who"></p>
+
+    <footer class="hint">
+      <span class="how how-desktop">← тяни карточку или жми стрелки →</span>
+      <span class="how how-touch">← тяни карточку →</span>
+      <span class="log" id="log"></span>
+      <span class="debug" id="debug"></span>
+      <span class="problems" id="problems"></span>
+    </footer>
+  </main>
+
+  <section class="overlay intro" id="intro">
+    <div class="death-face">🏠</div>
+    <h1 class="death-title">Свайп-жизнь</h1>
+    <ul class="rules">
+      <li>Тяни карточку влево или вправо. Каждое решение двигает шкалы 💰 ❤️ 💞 💼.</li>
+      <li>Любая шкала в <b>ноль</b> — конец. Любая шкала <b>до упора</b> — тоже конец.</li>
+      <li>Точки над шкалами подсказывают, <i>что</i> изменится, но не <i>куда</i>.</li>
+      <li>У тебя есть бабушкина квартира. Сколько она стоит — узнаешь, только когда продашь.</li>
+    </ul>
+    <button class="again" id="start" type="button">Начать</button>
+  </section>
+
+  <section class="overlay death" id="death" hidden>
+    <div class="death-face" id="death-face"></div>
+    <h1 class="death-title" id="death-title"></h1>
+    <p class="death-text" id="death-text"></p>
+    <p class="death-stats" id="death-stats"></p>
+    <button class="again" id="again" type="button">Ещё раз</button>
+  </section>
+
+  <script src="js/realty.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/endings.js"></script>
+  <script src="cards.js"></script>
+  <script src="js/swipe.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
